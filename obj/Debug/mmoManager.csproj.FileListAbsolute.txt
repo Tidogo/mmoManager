@@ -12,3 +12,4 @@ C:\Users\Timothy\Documents\Visual Studio 2013\Projects\mmoManager\mmoManager\bin
 C:\Users\Timothy\Documents\Visual Studio 2013\Projects\mmoManager\mmoManager\bin\Debug\EntityFramework.xml
 C:\Users\Timothy\Documents\Visual Studio 2013\Projects\mmoManager\mmoManager\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Timothy\Documents\Visual Studio 2013\Projects\mmoManager\mmoManager\obj\Debug\mmoManager.Servers.resources
+C:\Users\Timothy\Documents\Visual Studio 2013\Projects\mmoManager\mmoManager\obj\Debug\mmoManager.Guilds.resources

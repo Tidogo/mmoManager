@@ -33,6 +33,27 @@ namespace mmoManager
 
         private void btn_GetDeets_Click(object sender, EventArgs e)
         {
+            txt_Region.Clear();
+            Serve selserv = new Serve();
+            int servid = Convert.ToInt32(cbo_Servers.SelectedValue);
+            IEnumerable<Serve> servquery =
+                from servs in db.Serves
+                where servs.ServerID == servid
+                select servs;
+            foreach (Serve srvr in servquery)
+            {
+                selserv = srvr;
+            }
+            txt_Region.Text = Convert.ToString(selserv.ServerRegion);
+            if (Convert.ToInt32(selserv.ServerStatus) == 1)
+            {
+                lbl_Status.Text = "Online";
+            }
+            else
+            {
+                lbl_Status.Text = "Offline";
+            }
+
 
         }
     }

@@ -32,7 +32,7 @@
             this.txt_Region = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_Status = new System.Windows.Forms.Label();
             this.btn_GetDeets = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -70,14 +70,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Server Status:";
             // 
-            // label3
+            // lbl_Status
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(172, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "???";
+            this.lbl_Status.AutoSize = true;
+            this.lbl_Status.Location = new System.Drawing.Point(172, 89);
+            this.lbl_Status.Name = "lbl_Status";
+            this.lbl_Status.Size = new System.Drawing.Size(25, 13);
+            this.lbl_Status.TabIndex = 5;
+            this.lbl_Status.Text = "???";
             // 
             // btn_GetDeets
             // 
@@ -106,7 +106,7 @@
             this.ClientSize = new System.Drawing.Size(284, 155);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.btn_GetDeets);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_Status);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Region);
@@ -125,7 +125,7 @@
         private System.Windows.Forms.TextBox txt_Region;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_Status;
         private System.Windows.Forms.Button btn_GetDeets;
         private System.Windows.Forms.Button btn_Close;
     }

@@ -62,26 +62,39 @@ namespace mmoManager
 
         private void btn_GetInfo_Click(object sender, EventArgs e)
         {
-            Character character = new Character();
-            int charid = Convert.ToInt32(lbo_Chars.SelectedValue);
-            IEnumerable<Character> charquery =
-                from chars in db.Characters
-                where chars.CharacterID == charid
-                select chars;
-            foreach (Character chars in charquery)
+            try
             {
-                character = chars;
+                Character character = new Character();
+                int charid = Convert.ToInt32(lbo_Chars.SelectedValue);
+                IEnumerable<Character> charquery =
+                    from chars in db.Characters
+                    where chars.CharacterID == charid
+                    select chars;
+                foreach (Character chars in charquery)
+                {
+                    character = chars;
+                }
+                txt_CharClass.Text = character.CharClass.ToString();
+                txt_CharID.Text = character.CharacterID.ToString();
+                txt_CharLvl.Text = character.CharLevel.ToString();
+                txt_CharGuild.Text = character.CharGuild.ToString();
             }
-            txt_CharClass.Text = character.CharClass.ToString();
-            txt_CharID.Text = character.CharacterID.ToString();
-            txt_CharLvl.Text = character.CharLevel.ToString();
-            txt_CharGuild.Text = character.CharGuild.ToString();
+            catch
+            {
+                throw new NullReferenceException("An error occurred trying to retrieve character info, please try another character");
+            }
         }
 
         private void btn_ViewServers_Click(object sender, EventArgs e)
         {
             Servers sv = new Servers();
             sv.ShowDialog();
+        }
+
+        private void btn_ViewGuilds_Click(object sender, EventArgs e)
+        {
+            Guilds gds = new Guilds();
+            gds.ShowDialog();
         }
     }
 }

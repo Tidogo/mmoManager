@@ -165,6 +165,7 @@
             this.btn_ViewGuilds.TabIndex = 15;
             this.btn_ViewGuilds.Text = "View Guilds";
             this.btn_ViewGuilds.UseVisualStyleBackColor = true;
+            this.btn_ViewGuilds.Click += new System.EventHandler(this.btn_ViewGuilds_Click);
             // 
             // btn_Exit
             // 
